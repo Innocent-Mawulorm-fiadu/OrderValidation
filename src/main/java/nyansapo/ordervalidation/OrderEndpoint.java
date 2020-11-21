@@ -1,6 +1,5 @@
 package nyansapo.ordervalidation;
 
-import nyansapo.ordervalidation.OrderService;
 import nyansapo.ordervalidation.model.GetOrderRequest;
 import nyansapo.ordervalidation.model.GetOrderResponse;
 import org.springframework.beans.factory.annotation.Autowired;

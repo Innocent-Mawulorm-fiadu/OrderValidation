@@ -20,7 +20,7 @@ public class Configuration extends WsConfigurerAdapter {
         MessageDispatcherServlet messageDispatcherServlet = new MessageDispatcherServlet();
         messageDispatcherServlet.setApplicationContext(context);
         messageDispatcherServlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
+        return new ServletRegistrationBean(messageDispatcherServlet, "/publish/*");
 
     }
 
@@ -33,7 +33,7 @@ public class Configuration extends WsConfigurerAdapter {
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema orderSchema) {
         DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
         definition.setSchema(orderSchema);
-        definition.setLocationUri("/ws");
+        definition.setLocationUri("/publish");
         definition.setPortTypeName("OrderServ");
         definition.setTargetNamespace("http://nyansapo/ordervalidation/model");
         return definition;
