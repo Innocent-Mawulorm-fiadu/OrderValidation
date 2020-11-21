@@ -1,11 +1,13 @@
 package nyansapo.ordervalidation;
 
 import nyansapo.ordervalidation.model.Order;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class OrderService {
     private static final Map<String, Order> order = new HashMap<>();
     @PostConstruct
